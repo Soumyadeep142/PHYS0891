@@ -2,9 +2,9 @@
       double complex tprl, tprs, tl, ts, eim, ea, eb, ec, epra
       double complex eprb, eprc, Ga, Gb, Gc
       
-      open(8, file='dena.txt')
-      open(9, file='denb.txt')
-      open(10, file='denc.txt')
+      open(8, file='dena_E.txt')
+      open(9, file='denb_E.txt')
+      open(10, file='denc_E.txt')
       
       En=-2.5d0
       pi=acos(-1.d0)
@@ -16,7 +16,7 @@
         eb=dcmplx(0.d0, 0.d0)
         ec=dcmplx(0.d0, 0.d0)
         tl=dcmplx(1.d0, 0.d0)
-        ts=dcmplx(2.d0, 0.d0)
+        ts=dcmplx(1.d0, 0.d0)
         
         abs_t=cdabs(tl)+cdabs(ts)
         do 39 while (abs_t.ge.10e-9)

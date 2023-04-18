@@ -2,11 +2,11 @@
       double complex tprl, tprs, tl, ts, eim, ea, eb, ec, epra
       double complex eprb, eprc, Ga, Gb, Gc
       
-      open(8, file='dena.txt')
-      open(9, file='denb.txt')
-      open(10, file='denc.txt')
+      open(8, file='dena_zoomed.txt')
+      open(9, file='denb_zoomed.txt')
+      open(10, file='denc_zoomed.txt')
       
-      En=-2.5d0
+      En=-0.5d0
       pi=acos(-1.d0)
       abs_E=abs(En)
       
@@ -44,7 +44,7 @@
         write(9,*) En, rhob
         write(10,*) En, rhoc
         write(*,*) En
-        En=En+0.0001d0
+        En=En+0.00001d0
  25   continue
  
       stop

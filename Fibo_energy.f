@@ -42,21 +42,16 @@
         if (abs(t).le.2) then
         	write(8,*) 2, En
         endif
-	call matrix_mult(m1,m2,m3,2,2,2)
-	call trace_sum(m3, t, 2)
-	if (abs(t).le.2) then
-        	write(8,*) 3, En
-        endif
 	
-	do 7 l=4,10
-	  call matrix_mult(m2,m3,m4,2,2,2)
-	  call trace_sum(m4, t, 2)
+	do 7 l=3,10
+	  call matrix_mult(m1,m2,m3,2,2,2)
+	  call trace_sum(m3, t, 2)
 	  if (abs(t).le.2) then
         	write(8,*) l, En
-        endif
+          endif
 	  
+	  m1=m2
 	  m2=m3
-	  m3=m4
  7      continue
  25   continue	  
  
