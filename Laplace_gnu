@@ -1,0 +1,8 @@
+set terminal pdf
+set output "Laplace_test.pdf"
+set title "Laplace Equation with arbitary boundary Condition"
+set autoscale xfix
+set autoscale yfix
+set palette define (0 "yellow", 5 "red")
+set cbrange [0:5]
+plot "laplace_id.txt" matrix with image
